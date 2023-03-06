@@ -20,7 +20,7 @@ footer {
     margin-top:50px;
 }
 img {
-    border: 10px dotted purple;
+    border: 10px solid purple;
     transition: transform 1s;
 }
 img:hover {
