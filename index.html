@@ -40,26 +40,8 @@
         }
 
         function sortuj() {
-            let index;
-            let min, minIndex, temp;
-
-            for(let i=0; i<array.length-1; i++) {
-                min = array[i];
-                minIndex = i;
-
-                for(let j=i; j<array.length;j++) {
-                    if(array[j] < min) {
-                        min = array[j];
-                        minIndex = j;
-                    }
-                }
-
-                temp = array[i];
-                array[i] = array[minIndex];
-                array[minIndex] = temp;
-
-            }
-             return alert(array);
+            array.sort((a,b)=>a-b);
+            return alert(array);
         }
 
         function silnia() {
