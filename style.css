@@ -1,0 +1,29 @@
+body {
+    background-color:black;
+    color:white;
+    border:0;
+
+}
+#baner {
+    text-align:center;
+}
+#baner__text {
+    border: 2px solid green;
+    padding: 15px;
+}
+#main {
+    text-align: center;
+    margin-top:50px;
+}
+footer {
+    text-align:center;
+    margin-top:50px;
+}
+img {
+    border: 10px dotted purple;
+    transition: transform 1s;
+}
+img:hover {
+    transform: scale(1.1);
+    animation: rotate 4s linear infinite;
+}

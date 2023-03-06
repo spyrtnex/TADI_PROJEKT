@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona TADI</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <header id="baner">
+        <span id="baner__text">Array, najwieksza liczba, sortowanie, silnia do wyboru do koloru</span>
+    </header>
+    <main>
+
+        <article id="main">
+            <label>wpisz liczbę: <input type="number" id="l1"></label>
+            <button onclick="dodaj()">DODAJ</button>
+            <button onclick="wyswietl()">WYŚWIETL NAJWIĘKSZĄ LICZBĘ Z PODANYCH</button>
+            <button onclick="sortuj()">POSORTUJ</button>
+            <br><br><br>
+            <input type="number" id="silnia">
+            <button onclick="silnia()">OBLICZ SILNIE</button>
+        </article>
+
+    </main>
+    <footer>
+        <img src="meme.jpg" alt="meme">
+    </footer>
+    <script>
+        let array = [];
+
+        function dodaj() {
+            let a = document.getElementById("l1").value;
+            array.push(a);
+        }
+
+        function wyswietl() {
+            return alert(Math.max(...array));
+        }
+
+        function sortuj() {
+            let index;
+            let min, minIndex, temp;
+
+            for(let i=0; i<array.length-1; i++) {
+                min = array[i];
+                minIndex = i;
+
+                for(let j=i; j<array.length;j++) {
+                    if(array[j] < min) {
+                        min = array[j];
+                        minIndex = j;
+                    }
+                }
+
+                temp = array[i];
+                array[i] = array[minIndex];
+                array[minIndex] = temp;
+
+            }
+             return alert(array);
+        }
+
+        function silnia() {
+            let n = document.getElementById("silnia").value;
+
+            let i = 1;
+            let s = 1;
+            while (i <= n) s *= i++;
+            alert(n + '! = ' + s);
+        }
+    </script>
+</body>
+</html>
