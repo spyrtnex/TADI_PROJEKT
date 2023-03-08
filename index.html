@@ -9,18 +9,20 @@
 </head>
 <body>
     <header id="baner">
-        <span id="baner__text">Array, najwieksza liczba, sortowanie, silnia do wyboru do koloru</span>
+        <span id="strzalka"><-- przycisk</span>
+        <input type="checkbox" />
+        <div id="baner__text">Array, najwieksza liczba, sortowanie, silnia do wyboru do koloru</div>
     </header>
     <main>
 
         <article id="main">
-            <label>wpisz liczbę: <input type="number" id="l1"></label>
-            <button onclick="dodaj()">DODAJ</button>
-            <button onclick="wyswietl()">WYŚWIETL NAJWIĘKSZĄ LICZBĘ Z PODANYCH</button>
-            <button onclick="sortuj()">POSORTUJ</button>
+            <label>wpisz liczbę: <input type="number" id="l1" placeholder="liczba czy coś"></label>
+            <button onclick="dodaj()" class="button">DODAJ</button>
+            <button onclick="wyswietl()" class="button" id="weirdOne">WYŚWIETL NAJWIĘKSZĄ LICZBĘ Z PODANYCH</button>
+            <button onclick="sortuj()" class="button">POSORTUJ</button>
             <br><br><br>
-            <input type="number" id="silnia">
-            <button onclick="silnia()">OBLICZ SILNIE</button>
+            <input type="number" id="silnia" placeholder="tu też">
+            <button onclick="silnia()" class="button">OBLICZ SILNIE</button>
         </article>
 
     </main>
